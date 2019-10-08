@@ -2,7 +2,10 @@
 color  0A
 Title "Manual Daily Device Backup Activity - Coded By Pritam"
 
+
 ::For getting date in spesific format (08-10-2019 DD-MM-YYYY) we will use below variable
+::But before proceeding please ensure your date format by entering "Date /t" in command prompt if it printing in DD-MM-YYYY this format then below command will not work as intended
+::You need to change format of below command as per your date format
 set DD-MM-YYYY="%Date:~7,2%-%Date:~4,2%-%Date:~10,4%"
 
 ::Then we will create current date folder inside Log folder
@@ -11,10 +14,10 @@ mkdir Log\%DD-MM-YYYY%
 
 ::Below cmd accept username
 set /p UName=Enter Your Username:
-echo Welcome " %UName%
+echo "Welcome " %UName%
 
 ::Below cmd accept password
-set / Passwd=Please Enter Your Password:
+set /p Passwd=Please Enter Your Password:
 
 echo "have a patient script is running"
 
